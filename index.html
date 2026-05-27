@@ -220,15 +220,17 @@ footer a:hover{color:var(--gold)}
 }
 @media (max-width:820px){
   .nav-links{display:none}
-  .hero{padding:32px 0 0}
+  .hero{padding:48px 0 36px;background:#fff}
   .hero-grid{
-    grid-template-columns:1fr;gap:24px;
+    grid-template-columns:1fr;gap:0;
     padding-left:22px;padding-right:22px;
     min-height:auto;
   }
-  .lemon-wrap{order:-1;min-height:280px;justify-content:center}
-  .lemon-img{max-width:420px}
-  .hero h1{font-size:clamp(36px,8vw,52px)}
+  .lemon-wrap{display:none}            /* hide lemon on phones */
+  .eyebrow{font-size:12px;letter-spacing:.24em;margin-bottom:14px}
+  .hero h1{font-size:clamp(34px,9vw,52px);margin-bottom:18px}
+  .hero .underline{width:48px;height:3px;margin-bottom:20px}
+  .hero p.lede{font-size:16px;margin-bottom:26px;max-width:none}
   .squeeze-inner{grid-template-columns:1fr;gap:24px;padding:28px 0;text-align:center}
   .sq-label{text-align:center}
   .pills{grid-template-columns:repeat(3,1fr);gap:18px}
