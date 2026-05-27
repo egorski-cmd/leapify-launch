@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leapifymedia.com/sitemap.xml
