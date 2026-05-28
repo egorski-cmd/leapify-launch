@@ -44,7 +44,7 @@ html{scroll-behavior:smooth}
 body{
   font-family:'Inter',system-ui,-apple-system,sans-serif;
   color:var(--text);
-  background:#fff;
+  background:#0D0D0D;
   line-height:1.55;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
@@ -55,7 +55,8 @@ a{color:inherit;text-decoration:none}
 .container{max-width:1280px;margin:0 auto;padding:0 36px}
 
 /* ========== NAV ========== */
-.nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #efefef}
+.nav{position:sticky;top:0;z-index:50;background:#0D0D0D;border-bottom:1px solid #1f1f1f}
+.nav .logo-img{filter:brightness(0) invert(1)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:96px;overflow:visible}
 .nav{overflow:visible}
 .logo{display:flex;align-items:center;gap:14px;position:relative;z-index:2}
@@ -64,9 +65,10 @@ footer .logo-img{height:110px;filter:brightness(0) invert(1)}
 @media (max-width:820px){.logo-img{height:96px}.nav-inner{height:80px}}
 
 .nav-links{display:flex;align-items:center;gap:42px}
-.nav-links a{font-family:'Poppins';font-weight:500;font-size:14px;color:var(--text);letter-spacing:.12em;text-transform:uppercase;position:relative;padding:6px 0}
+.nav-links a{font-family:'Poppins';font-weight:500;font-size:14px;color:#e6e6e6;letter-spacing:.12em;text-transform:uppercase;position:relative;padding:6px 0}
+.nav-links a.active{color:#fff}
 .nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--gold)}
-.nav-links a:hover{color:var(--gold-deep)}
+.nav-links a:hover{color:var(--gold)}
 .nav-links .caret{display:inline-block;margin-left:6px;font-size:9px;color:#999;transform:translateY(-1px)}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Poppins';font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;padding:15px 26px;border-radius:4px;border:none;cursor:pointer;transition:.2s ease}
 .btn-primary{background:var(--gold);color:var(--black)}
@@ -75,17 +77,18 @@ footer .logo-img{height:110px;filter:brightness(0) invert(1)}
 .btn:hover .arr{transform:translateX(4px)}
 
 /* ========== HERO ========== */
-.hero{background:var(--bg-2);position:relative;overflow:hidden;padding:44px 0 0}
+.hero{background:#0D0D0D;color:#fff;position:relative;overflow:hidden;padding:4px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px circle at 78% 50%,rgba(212,175,55,.07),transparent 60%);pointer-events:none}
 .hero-grid{
-  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:24px;align-items:center;
-  /* Container-aligned left padding, but right edge bleeds to viewport so the lemon hangs off */
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:24px;align-items:center;
   padding-left:max(36px, calc((100% - 1280px)/2 + 36px));
-  padding-right:0;
-  min-height:460px;
+  padding-right:max(36px, calc((100% - 1280px)/2 + 36px));
+  min-height:240px;
 }
 .eyebrow{
-  font-family:'Poppins';font-weight:600;font-size:14px;letter-spacing:.22em;
-  color:var(--gold);text-transform:uppercase;margin-bottom:18px;
+  font-family:'Poppins';font-weight:600;font-size:13px;letter-spacing:.22em;
+  color:var(--gold);text-transform:uppercase;margin-bottom:8px;
 }
 .cred-badge{
   display:inline-flex;align-items:center;
@@ -104,12 +107,14 @@ footer .logo-img{height:110px;filter:brightness(0) invert(1)}
 }
 .cta-secondary:hover{color:var(--gold-deep);border-color:var(--gold)}
 .hero h1{
-  font-size:clamp(44px,5.2vw,76px);font-weight:800;color:var(--black);
-  margin-bottom:20px;line-height:1.02;letter-spacing:-.01em;text-transform:uppercase;
+  font-size:clamp(34px,3.9vw,54px);font-weight:800;color:#fff;
+  margin-bottom:8px;line-height:1.02;letter-spacing:-.01em;text-transform:uppercase;
 }
 .hero h1 span{display:block}
-.hero .underline{width:60px;height:3px;background:var(--gold);margin-bottom:24px;border-radius:2px}
-.hero p.lede{font-size:17px;color:#3a3a3a;max-width:480px;margin-bottom:30px;line-height:1.6}
+.hero .underline{width:42px;height:3px;background:var(--gold);margin-bottom:12px;border-radius:2px}
+.hero p.lede{font-size:15.5px;color:#c9c9c9;max-width:420px;margin-bottom:14px;line-height:1.5}
+.cta-secondary{color:#cfcfcf;border-bottom-color:rgba(255,255,255,.35)}
+.cta-secondary:hover{color:var(--gold);border-color:var(--gold)}
 
 .lemon-wrap{
   position:relative;display:flex;justify-content:flex-end;align-items:center;
@@ -117,31 +122,38 @@ footer .logo-img{height:110px;filter:brightness(0) invert(1)}
 }
 .lemon-img{
   width:100%;
-  max-width:780px;
+  max-width:400px;
   height:auto;
   object-fit:contain;
   display:block;
 }
 
-/* ========== SQUEEZE BAR ========== */
-.squeeze{background:var(--black);color:#fff}
-.squeeze-inner{display:grid;grid-template-columns:1.05fr 3.4fr;gap:48px;align-items:center;padding:32px 0}
-.sq-label .small{color:var(--gold);font-family:'Poppins';font-weight:500;font-size:12px;letter-spacing:.28em;text-transform:uppercase;display:block;margin-bottom:8px}
-.sq-label .big{font-family:'Poppins';font-weight:700;font-size:22px;line-height:1.2;letter-spacing:.06em;text-transform:uppercase;color:#fff}
-.pills{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;justify-items:center}
+/* ========== SQUEEZE BAR (feature moment) ========== */
+.squeeze{background:#000;color:#fff;position:relative;overflow:hidden}
+.squeeze-inner{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;gap:28px;
+  padding:8px 0 48px;text-align:center;
+}
+.sq-label{max-width:1100px}
+.sq-label .small{color:var(--gold);font-family:'Poppins';font-weight:600;font-size:13px;letter-spacing:.28em;text-transform:uppercase;display:block;margin-bottom:14px}
+.sq-label .big{font-family:'Poppins';font-weight:800;font-size:clamp(30px,3.8vw,48px);line-height:1.1;letter-spacing:-.005em;text-transform:uppercase;color:#fff}
+.sq-label .big .mk{color:var(--gold)}
+.pills{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;justify-items:center;width:100%}
 .pill{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;max-width:160px}
 .pill .ic{
-  width:62px;height:62px;border:1.5px solid var(--gold);border-radius:50%;
+  width:72px;height:72px;border:1.5px solid var(--gold);border-radius:50%;
   display:flex;align-items:center;justify-content:center;color:var(--gold);
 }
-.pill .nm{font-family:'Poppins';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fff;line-height:1.4}
+.pill .ic svg{width:34px;height:34px}
+.pill .nm{font-family:'Poppins';font-weight:600;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;line-height:1.4}
 
 /* ========== INDUSTRIES ========== */
-.industries{padding:96px 0 100px;background:var(--bg)}
-.sec-head{text-align:center;margin-bottom:56px}
+.industries{padding:72px 0 76px;background:#0D0D0D;color:#fff}
+.sec-head{text-align:center;margin-bottom:42px}
 .sec-head .eyebrow{margin-bottom:14px}
 .sec-head h2{
-  font-size:clamp(34px,3.6vw,46px);font-weight:800;color:var(--black);
+  font-size:clamp(34px,3.6vw,46px);font-weight:800;color:#fff;
   text-transform:uppercase;letter-spacing:-.005em;line-height:1.1;
 }
 .ind-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
@@ -166,19 +178,58 @@ footer .logo-img{height:110px;filter:brightness(0) invert(1)}
 .card-body .arrow{color:var(--gold);font-weight:700;font-size:20px;line-height:1}
 
 /* ========== PILLARS ========== */
-.pillars{padding:60px 0 80px;background:#fff}
+.pillars{padding:48px 0 60px;background:#0D0D0D;color:#fff}
 .pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
 .pillar{display:flex;flex-direction:column;gap:10px}
 .pillar .ic-w{
   width:46px;height:46px;border-radius:8px;
-  display:flex;align-items:center;justify-content:flex-start;color:var(--gold-deep);
+  display:flex;align-items:center;justify-content:flex-start;color:var(--gold);
   margin-bottom:8px;
 }
-.pillar h4{font-family:'Poppins';font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--black);line-height:1.3}
-.pillar p{color:var(--muted);font-size:14px;max-width:260px;line-height:1.55}
+.pillar h4{font-family:'Poppins';font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#fff;line-height:1.3}
+.pillar p{color:#9c9c9c;font-size:14px;max-width:260px;line-height:1.55}
+
+/* ========== AI PRIVACY ========== */
+.ai-privacy{
+  background:linear-gradient(180deg,#0D0D0D 0%,#1A1A1A 100%);
+  color:#fff;padding:72px 0 80px;position:relative;overflow:hidden;
+}
+.ai-privacy::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(800px circle at 50% 0%,rgba(212,175,55,.14),transparent 60%);
+  pointer-events:none;
+}
+.ai-privacy .container{position:relative;z-index:1}
+.ai-emblem{display:flex;justify-content:center;margin-bottom:28px;color:var(--gold)}
+.ai-emblem svg{width:72px;height:72px}
+.ai-privacy .sec-head{margin-bottom:24px}
+.ai-privacy .sec-head h2{color:#fff;text-transform:uppercase;letter-spacing:-.005em}
+.ai-privacy .sec-head .eyebrow{color:var(--gold)}
+.ai-lede{
+  font-size:17px;color:#c9c9c9;line-height:1.7;
+  max-width:760px;margin:0 auto 56px;text-align:center;
+}
+.ai-lede .hilite{color:var(--gold);font-weight:600}
+.ai-pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ai-pcard{
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(212,175,55,.22);
+  border-radius:14px;padding:32px 28px;
+  transition:.25s ease;
+}
+.ai-pcard:hover{border-color:rgba(212,175,55,.45);transform:translateY(-4px)}
+.ai-pcard .num{
+  font-family:'Poppins';font-weight:700;font-size:13px;
+  color:var(--gold);letter-spacing:.18em;margin-bottom:14px;
+}
+.ai-pcard h4{
+  font-family:'Poppins';font-weight:800;font-size:15px;
+  color:#fff;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;line-height:1.25;
+}
+.ai-pcard p{font-size:14.5px;color:#9c9c9c;line-height:1.6}
 
 /* ========== RESULTS ========== */
-.results{padding:96px 0;background:var(--black);color:#fff;position:relative;overflow:hidden}
+.results{padding:72px 0 80px;background:var(--black);color:#fff;position:relative;overflow:hidden}
 .results::before{content:"";position:absolute;inset:0;background:radial-gradient(600px circle at 80% 20%,rgba(212,175,55,.18),transparent 60%);pointer-events:none}
 .results .sec-head h2{color:#fff}
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
@@ -189,7 +240,12 @@ footer .logo-img{height:110px;filter:brightness(0) invert(1)}
 .metric .ds{font-size:13.5px;color:#9c9c9c;margin-top:10px;line-height:1.5}
 
 /* ========== TESTIMONIALS ========== */
-.testimonials{padding:96px 0;background:var(--bg)}
+.testimonials{padding:72px 0 80px;background:#0D0D0D;color:#fff}
+.testimonials .sec-head h2{color:#fff}
+.testimonials .t-card{background:#1a1a1a;color:#fff;border-top-color:var(--gold)}
+.testimonials .t-card blockquote{color:#cfcfcf}
+.testimonials .t-meta .nm{color:#fff}
+.testimonials .t-meta .ti{color:#9c9c9c}
 .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
 .t-card{background:#fff;border-radius:14px;padding:32px 28px;box-shadow:0 10px 30px rgba(0,0,0,.06);display:flex;flex-direction:column;gap:18px;border-top:3px solid var(--gold)}
 .stars{color:var(--gold);letter-spacing:3px;font-size:16px}
@@ -200,7 +256,7 @@ footer .logo-img{height:110px;filter:brightness(0) invert(1)}
 .t-meta .ti{font-size:12px;color:var(--muted)}
 
 /* ========== CTA / CONTACT ========== */
-.cta-section{padding:96px 0;background:#fff}
+.cta-section{padding:72px 0 80px;background:#0D0D0D}
 .cta-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;background:linear-gradient(135deg,#0D0D0D,#1B1B1B);border-radius:24px;padding:64px;color:#fff;position:relative;overflow:hidden}
 .cta-wrap::before{content:"";position:absolute;right:-100px;top:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(closest-side,rgba(212,175,55,.35),transparent 70%)}
 .cta-left h2{font-size:clamp(30px,3.4vw,42px);color:#fff;margin-bottom:16px;text-transform:uppercase}
@@ -238,27 +294,35 @@ footer a:hover{color:var(--gold)}
 }
 @media (max-width:820px){
   .nav-links{display:none}
-  .hero{padding:36px 0 32px;background:#fff}
+  .hero{padding:36px 0 32px;background:#0D0D0D}
   .hero-grid{
     grid-template-columns:1fr;gap:0;
     padding-left:22px;padding-right:22px;
     min-height:auto;
   }
-  .lemon-wrap{display:none}            /* hide lemon on phones */
+  .lemon-wrap{display:flex;justify-content:center;min-height:auto;margin-top:14px}
+  .lemon-img{max-width:360px}
   .cred-badge{font-size:10.5px;letter-spacing:.14em;padding:8px 14px;margin-bottom:18px}
   .eyebrow{font-size:12px;letter-spacing:.24em;margin-bottom:14px}
   .hero h1{font-size:clamp(34px,9vw,52px);margin-bottom:18px}
   .hero .underline{width:48px;height:3px;margin-bottom:20px}
   .hero p.lede{font-size:16px;margin-bottom:24px;max-width:none}
   .cta-row{gap:18px;flex-direction:column;align-items:flex-start}
-  .squeeze-inner{grid-template-columns:1fr;gap:24px;padding:28px 0;text-align:center}
-  .sq-label{text-align:center}
+  .squeeze-inner{gap:28px;padding:44px 0;text-align:center}
+  .sq-label .big{font-size:clamp(26px,7vw,38px)}
+  .pill .ic{width:60px;height:60px}
+  .pill .ic svg{width:28px;height:28px}
   .pills{display:flex;flex-wrap:wrap;justify-content:center;gap:24px 18px}
   .pill{flex:0 0 calc(33.333% - 12px);max-width:140px}
   .ind-grid{grid-template-columns:1fr 1fr;gap:16px}
   .pillars{padding:48px 0 56px}
   .pillar-grid{grid-template-columns:repeat(2,1fr);gap:28px 24px}
   .pillar p{font-size:13.5px}
+  .ai-privacy{padding:64px 0 72px}
+  .ai-pillars-grid{grid-template-columns:1fr;gap:14px}
+  .ai-pcard{padding:24px 22px}
+  .ai-emblem svg{width:60px;height:60px}
+  .ai-lede{font-size:15.5px;line-height:1.6;margin-bottom:36px}
   .cta-wrap{grid-template-columns:1fr;padding:36px 28px}
   .t-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
@@ -312,7 +376,7 @@ footer a:hover{color:var(--gold)}
     <div class="lemon-wrap">
       <!-- Half-lemon dripping juice (provided by client) -->
       <img class="lemon-img"
-           src="./lemon.jpg"
+           src="./lemon.png"
            alt="Fresh lemon half dripping juice">
     </div>
   </div>
@@ -324,7 +388,7 @@ footer a:hover{color:var(--gold)}
     <div class="squeeze-inner">
       <div class="sq-label">
         <span class="small">We Help You</span>
-        <span class="big">Squeeze Every Drop<br>Of Revenue</span>
+        <span class="big">Squeeze Every Drop Of <span class="mk">Marketing</span> Revenue</span>
       </div>
       <div class="pills">
         <div class="pill">
@@ -353,9 +417,9 @@ footer a:hover{color:var(--gold)}
         </div>
         <div class="pill">
           <div class="ic">
-            <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a13 13 0 1 0 13 13"/><path d="M16 3v13l9-9A13 13 0 0 0 16 3z" /><path d="M16 16l9 9"/></svg>
+            <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3 L28 7 L28 16 C28 22 23 27 16 30 C9 27 4 22 4 16 L4 7 Z"/><path d="M16 11v10"/><path d="M19 13.5c0-1-1.3-1.8-3-1.8s-3 .8-3 1.8 1.3 1.7 3 1.8 3 .8 3 1.8-1.3 1.8-3 1.8-3-.8-3-1.8"/></svg>
           </div>
-          <span class="nm">Better Profit</span>
+          <span class="nm">Lower Ad Waste</span>
         </div>
       </div>
     </div>
@@ -479,6 +543,53 @@ footer a:hover{color:var(--gold)}
         </div>
         <h4>Human Experts.<br>Real Results.</h4>
         <p>Strategists, not just marketers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== AI PRIVACY =================== -->
+<section class="ai-privacy" id="ai">
+  <div class="container">
+    <div class="ai-emblem">
+      <!-- Shield + server core: data stays in the building -->
+      <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M48 6 L82 18 L82 44 C82 65, 66 82, 48 90 C30 82, 14 65, 14 44 L14 18 Z"
+              fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+        <rect x="32" y="32" width="32" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <line x1="32" y1="44" x2="64" y2="44" stroke="currentColor" stroke-width="2"/>
+        <line x1="32" y1="52" x2="64" y2="52" stroke="currentColor" stroke-width="2"/>
+        <circle cx="38" cy="38" r="1.6" fill="currentColor"/>
+        <circle cx="44" cy="38" r="1.6" fill="currentColor"/>
+        <circle cx="38" cy="48" r="1.6" fill="currentColor"/>
+        <circle cx="44" cy="48" r="1.6" fill="currentColor"/>
+        <circle cx="38" cy="58" r="1.6" fill="currentColor"/>
+        <circle cx="44" cy="58" r="1.6" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="sec-head">
+      <div class="eyebrow">Built In-House &middot; Built Private</div>
+      <h2>Your Trade Secrets<br>Never Leave Our Walls.</h2>
+    </div>
+    <p class="ai-lede">
+      Every other agency pipes your data through <span class="hilite">OpenAI, Anthropic, or Google</span> &mdash; meaning your customer lists, pricing, and playbooks become training data for someone else's model.
+      Leapify Media's <span class="hilite">proprietary agentic AIs</span> run on our own hardware, in our own facility. Local inference. Zero cloud exposure. Your business stays yours.
+    </p>
+    <div class="ai-pillars-grid">
+      <div class="ai-pcard">
+        <div class="num">01</div>
+        <h4>100% On-Premise</h4>
+        <p>No cloud APIs. No third-party LLM calls. All inference runs on Leapify-owned hardware, in our own data room.</p>
+      </div>
+      <div class="ai-pcard">
+        <div class="num">02</div>
+        <h4>Zero Data Leakage</h4>
+        <p>Your customer lists, pricing, and trade secrets aren't used to train someone else's model. They never leave our infrastructure.</p>
+      </div>
+      <div class="ai-pcard">
+        <div class="num">03</div>
+        <h4>Proprietary Agentic AI</h4>
+        <p>Custom-built agents trained on home-service workflows. Owned, operated, and continuously tuned by Leapify Media.</p>
       </div>
     </div>
   </div>
