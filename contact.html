@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Leapify Media | Book a Strategy Call</title>
+<meta name="description" content="Get in touch with Leapify Media. 30-minute strategy call — no pitch. We'll audit your funnel, find the biggest revenue leak, and show you what we'd fix first.">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="canonical" href="https://leapifymedia.com/contact">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Leapify Media">
+<meta property="og:title" content="Contact — Leapify Media">
+<meta property="og:description" content="Book a strategy call. 30 minutes. No pitch.">
+<meta property="og:url" content="https://leapifymedia.com/contact">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><path d='M14 44 C14 22, 32 8, 56 14 C62 32, 56 56, 36 64 C20 70, 10 60, 14 44Z' fill='none' stroke='%231B1B1B' stroke-width='5'/><g transform='translate(40 38) rotate(-18)'><circle r='16' fill='%23D4AF37'/><g stroke='%231B1B1B' stroke-width='1.5' opacity='.55' fill='none'><line x1='-13' y1='0' x2='13' y2='0'/><line x1='0' y1='-13' x2='0' y2='13'/><line x1='-9' y1='-9' x2='9' y2='9'/><line x1='-9' y1='9' x2='9' y2='-9'/></g><circle r='3' fill='%231B1B1B'/></g><path d='M40 64 C36 70, 36 76, 40 78 C44 76, 44 70, 40 64Z' fill='%23D4AF37'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000000;
+  --black-2:#000000;
+  --gold:#D4AF37;
+  --gold-deep:#B8932E;
+  --bg:#F3F3F3;
+  --bg-2:#FDFCFA;
+  --line:#E6E6E6;
+  --muted:#6B6B6B;
+  --text:#1B1B1B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif;line-height:1.1;letter-spacing:-.005em;font-weight:800}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.container{max-width:1280px;margin:0 auto;padding:0 36px}
+.container.narrow{max-width:1080px}
+
+/* ========== NAV ========== */
+.nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #efefef;overflow:visible}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:96px;overflow:visible}
+.logo{display:flex;align-items:center;gap:14px;position:relative;z-index:2}
+.logo-img{height:200px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:42px}
+.nav-links a{font-family:'Poppins';font-weight:500;font-size:14px;color:var(--text);letter-spacing:.12em;text-transform:uppercase;position:relative;padding:6px 0}
+.nav-links a.active{color:var(--black)}
+.nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--gold)}
+.nav-links a:hover{color:var(--gold-deep)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Poppins';font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;padding:15px 26px;border-radius:4px;border:none;cursor:pointer;transition:.2s ease}
+.btn-primary{background:var(--gold);color:var(--black)}
+.btn-primary:hover{background:var(--gold-deep);color:#fff;transform:translateY(-1px)}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.btn .arr{display:inline-block;transition:transform .2s}
+.btn:hover .arr{transform:translateX(4px)}
+
+/* ========== CONTACT HERO ========== */
+.contact-hero{background:var(--bg-2);position:relative;overflow:hidden;padding:54px 0 44px;text-align:center}
+.eyebrow{font-family:'Poppins';font-weight:600;font-size:13.5px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:16px}
+.contact-hero h1{font-size:clamp(44px,5vw,72px);font-weight:800;color:var(--black);margin-bottom:16px;line-height:1.04;letter-spacing:-.01em;text-transform:uppercase}
+.contact-hero .underline{width:54px;height:3px;background:var(--gold);margin:0 auto 22px;border-radius:2px}
+.contact-hero p.lede{font-size:17px;color:#3a3a3a;max-width:680px;margin:0 auto;line-height:1.65}
+
+/* ========== CONTACT MAIN ========== */
+.contact-main{padding:50px 0 80px;background:var(--bg-2)}
+.contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+
+.form-card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:40px 38px;box-shadow:0 20px 50px rgba(0,0,0,.06);
+}
+.form-card h2{font-family:'Poppins';font-weight:800;font-size:22px;color:var(--black);text-transform:uppercase;letter-spacing:.02em;margin-bottom:6px}
+.form-card .form-sub{color:var(--muted);font-size:14px;margin-bottom:24px}
+.form-card .field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.form-card .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-card label{font-family:'Poppins';font-size:11.5px;font-weight:600;color:var(--black);letter-spacing:.08em;text-transform:uppercase}
+.form-card input,.form-card select,.form-card textarea{
+  width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;
+  font-family:'Inter';font-size:14.5px;background:#fff;color:var(--text);transition:.2s;
+}
+.form-card input:focus,.form-card select:focus,.form-card textarea:focus{
+  outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.18)
+}
+.form-card textarea{resize:vertical;min-height:96px}
+.form-card .submit-btn{width:100%;justify-content:center;margin-top:8px}
+.form-card .privacy-note{font-size:11.5px;color:var(--muted);margin-top:14px;text-align:center;line-height:1.5}
+.form-card .privacy-note a{color:var(--gold-deep);text-decoration:underline}
+
+.contact-sidebar{display:flex;flex-direction:column;gap:18px}
+.side-card{
+  background:#000;color:#fff;border-radius:18px;padding:32px 30px;
+  position:relative;overflow:hidden;
+}
+.side-card::before{
+  content:"";position:absolute;right:-80px;top:-80px;width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(212,175,55,.18),transparent 70%);pointer-events:none;
+}
+.side-card .s-eyebrow{font-family:'Poppins';font-weight:600;font-size:11px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
+.side-card h3{font-family:'Poppins';font-weight:800;font-size:22px;color:#fff;text-transform:uppercase;margin-bottom:10px;line-height:1.15}
+.side-card p{color:#c9c9c9;font-size:14px;margin-bottom:16px;line-height:1.6}
+.side-card .btn-cal{
+  display:inline-flex;align-items:center;gap:10px;font-family:'Poppins';font-weight:700;font-size:12.5px;
+  letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:var(--black);
+  padding:13px 22px;border-radius:6px;transition:.2s;
+}
+.side-card .btn-cal:hover{background:#fff;color:var(--black);transform:translateY(-1px)}
+
+.info-card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:28px 30px;
+}
+.info-row{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.info-row:last-child{border-bottom:0;padding-bottom:0}
+.info-row:first-child{padding-top:0}
+.info-row .ic{
+  flex-shrink:0;width:38px;height:38px;border-radius:50%;
+  background:rgba(212,175,55,.12);border:1.5px solid rgba(212,175,55,.45);
+  display:flex;align-items:center;justify-content:center;color:var(--gold-deep);
+}
+.info-row .text .lb{font-family:'Poppins';font-weight:700;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.info-row .text .val{font-size:14.5px;color:var(--text);line-height:1.4;font-weight:500}
+.info-row .text .val a{color:var(--text)}
+.info-row .text .val a:hover{color:var(--gold-deep)}
+
+/* ========== WHAT HAPPENS NEXT ========== */
+.next-steps{padding:80px 0 90px;background:#000;color:#fff}
+.next-steps .sec-head{text-align:center;margin-bottom:50px}
+.next-steps .sec-head h2{font-size:clamp(28px,3vw,40px);color:#fff;text-transform:uppercase}
+.next-steps .sec-head .eyebrow{color:var(--gold);margin-bottom:14px}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1080px;margin:0 auto}
+.step{
+  background:rgba(255,255,255,.035);border:1px solid rgba(212,175,55,.22);
+  border-radius:14px;padding:28px 28px;position:relative;
+}
+.step .num{
+  font-family:'Poppins';font-weight:800;font-size:36px;color:var(--gold);
+  line-height:1;margin-bottom:14px;
+}
+.step h4{font-family:'Poppins';font-weight:800;font-size:16px;color:#fff;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px;line-height:1.2}
+.step p{font-size:14px;color:#9c9c9c;line-height:1.6}
+
+/* ========== FOOTER ========== */
+footer{background:#000;color:#cfcfcf;padding:50px 0 26px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:34px}
+footer h5{font-family:'Poppins';font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+footer a{font-size:14px;color:#bdbdbd}
+footer a:hover{color:var(--gold)}
+footer .logo-img{height:110px;filter:brightness(0) invert(1)}
+.foot-bottom{border-top:1px solid #2a2a2a;padding-top:22px;display:flex;justify-content:space-between;color:#7a7a7a;font-size:12.5px}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width:1080px){
+  .contact-grid{grid-template-columns:1fr;gap:24px}
+  .steps-grid{grid-template-columns:1fr;gap:14px;max-width:560px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .nav-links{display:none}
+  .logo-img{height:96px}
+  .contact-hero{padding:36px 0 32px}
+  .contact-main{padding:32px 0 60px}
+  .form-card{padding:30px 24px}
+  .form-card .row{grid-template-columns:1fr}
+  .next-steps{padding:54px 0 60px}
+  .container{padding:0 22px}
+}
+</style>
+</head>
+<body>
+
+<!-- =================== NAV =================== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo" aria-label="Leapify Media">
+      <img src="./logo.png" alt="Leapify Media" class="logo-img">
+    </a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/#industries">Industries</a>
+      <a href="/about">About</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/contact" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- =================== HERO =================== -->
+<section class="contact-hero">
+  <div class="container">
+    <div class="eyebrow">Get In Touch</div>
+    <h1>Let's Talk.</h1>
+    <div class="underline"></div>
+    <p class="lede">30 minutes. No pitch. We'll audit your funnel, find the biggest revenue leak, and show you what we'd fix first &mdash; whether or not you ever hire us.</p>
+  </div>
+</section>
+
+<!-- =================== CONTACT MAIN =================== -->
+<section class="contact-main">
+  <div class="container narrow">
+    <div class="contact-grid">
+
+      <!-- FORM CARD -->
+      <div class="form-card">
+        <h2>Send Us A Message</h2>
+        <p class="form-sub">Tell us a bit about your business and we'll be in touch within 1 business day.</p>
+
+        <form onsubmit="event.preventDefault();alert('Thanks &mdash; we\'ll be in touch within 1 business day.');this.reset();">
+          <div class="row">
+            <div class="field">
+              <label for="fn">First Name</label>
+              <input id="fn" type="text" required placeholder="John">
+            </div>
+            <div class="field">
+              <label for="ln">Last Name</label>
+              <input id="ln" type="text" required placeholder="Smith">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="em">Business Email</label>
+            <input id="em" type="email" required placeholder="you@yourcompany.com">
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="ph">Phone</label>
+              <input id="ph" type="tel" placeholder="(555) 555-0100">
+            </div>
+            <div class="field">
+              <label for="co">Company Name</label>
+              <input id="co" type="text" required placeholder="Acme HVAC">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="ind">Industry</label>
+              <select id="ind" required>
+                <option value="">Select&hellip;</option>
+                <option>HVAC</option>
+                <option>Roofing</option>
+                <option>Plumbing</option>
+                <option>Landscaping &amp; Turf</option>
+                <option>Restoration</option>
+                <option>Other Home Service</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="rev">Annual Revenue</label>
+              <select id="rev" required>
+                <option value="">Select&hellip;</option>
+                <option>Under $500K &mdash; we may not be a good fit</option>
+                <option>$500K &mdash; $1.5M</option>
+                <option>$1.5M &mdash; $5M</option>
+                <option>$5M &mdash; $10M</option>
+                <option>$10M+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="spend">Current Monthly Marketing Spend</label>
+            <select id="spend">
+              <option value="">Select (optional)</option>
+              <option>$0 &mdash; running nothing right now</option>
+              <option>Under $2K/mo</option>
+              <option>$2K &mdash; $5K/mo</option>
+              <option>$5K &mdash; $15K/mo</option>
+              <option>$15K+/mo</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="msg">What's the biggest growth challenge right now?</label>
+            <textarea id="msg" required placeholder="Tell us what's going on. Lead volume, attribution, conversion, dispatch, anything &mdash; we want the real picture."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn">Send Message <span class="arr">→</span></button>
+
+          <p class="privacy-note">By submitting, you agree to our <a href="/privacy">Privacy Policy</a>. We respond within 1 business day. We never share your information.</p>
+        </form>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="contact-sidebar">
+
+        <!-- CALENDAR / BOOK DIRECTLY -->
+        <div class="side-card">
+          <div class="s-eyebrow">Prefer To Book Directly?</div>
+          <h3>Grab A Slot On The Calendar.</h3>
+          <p>Skip the form &mdash; pick a 30-minute slot that works for you and we'll meet you on video. No prep needed; we'll do the funnel audit live.</p>
+          <!-- TODO: Replace # with your Calendly/SavvyCal/Cal.com link -->
+          <a href="#" class="btn-cal">Book A Strategy Call <span class="arr">→</span></a>
+        </div>
+
+        <!-- DIRECT CONTACT INFO -->
+        <div class="info-card">
+          <div class="info-row">
+            <div class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="text">
+              <div class="lb">Email</div>
+              <div class="val"><a href="mailto:contact@leapifymedia.com">contact@leapifymedia.com</a></div>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="text">
+              <div class="lb">Phone</div>
+              <div class="val"><a href="tel:+15127753639">(512) 775-3639</a></div>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="text">
+              <div class="lb">Location</div>
+              <div class="val">Austin, TX</div>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="text">
+              <div class="lb">Response Time</div>
+              <div class="val">Within 1 business day</div>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <div class="text">
+              <div class="lb">Who We Work With</div>
+              <div class="val">Home-service operators with $500K+ in annual revenue who treat marketing as infrastructure, not an experiment.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== WHAT HAPPENS NEXT =================== -->
+<section class="next-steps">
+  <div class="container">
+    <div class="sec-head">
+      <div class="eyebrow">What Happens Next</div>
+      <h2>From First Message<br>To Real Strategy.</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="num">01</div>
+        <h4>You Tell Us The Real Picture</h4>
+        <p>You fill out the form or grab a calendar slot. The more honest you are about what's working and what isn't, the more useful the call is.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h4>We Audit &amp; Show Up Prepared</h4>
+        <p>Before the call, we look at what's publicly visible (your site, your ads, your reviews) so we walk in with real observations, not generic questions.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h4>30 Minutes. Real Recommendations.</h4>
+        <p>Live funnel audit. The biggest revenue leak we see. What we'd fix first. You walk away with a plan &mdash; whether or not you hire us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="/" class="logo"><img src="./logo.png" alt="Leapify Media" class="logo-img"></a>
+        <p style="margin-top:14px;font-size:14px;color:#9a9a9a;max-width:320px">Growth infrastructure for home service companies. Built in-house in Austin, TX.</p>
+      </div>
+      <div>
+        <h5>Solutions</h5>
+        <ul><li><a href="/services">Lead Generation</a></li><li><a href="/services">AI Dispatch &amp; Follow-up</a></li><li><a href="/services">CRM &amp; Automation</a></li><li><a href="/services">Brand &amp; Web</a></li></ul>
+      </div>
+      <div>
+        <h5>Industries</h5>
+        <ul><li><a href="/#industries">HVAC</a></li><li><a href="/#industries">Roofing</a></li><li><a href="/#industries">Plumbing</a></li><li><a href="/#industries">Landscaping &amp; Turf</a></li><li><a href="/#industries">Restoration</a></li></ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul><li><a href="/about">About</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy">Privacy</a></li><li><a href="/terms">Terms</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Leapify Media. All rights reserved.</span><span>Austin, TX</span></div>
+  </div>
+</footer>
+
+</body>
+</html>
