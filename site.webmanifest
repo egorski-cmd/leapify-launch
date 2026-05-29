@@ -1,0 +1,12 @@
+{
+  "name": "Leapify Media",
+  "short_name": "Leapify",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ],
+  "theme_color": "#D4AF37",
+  "background_color": "#000000",
+  "display": "standalone",
+  "start_url": "/"
+}
