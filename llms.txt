@@ -1,0 +1,49 @@
+# Leapify Media — Growth Infrastructure for Home Service Companies
+
+> Leapify Media provides authoritative, evergreen content about AI-powered growth infrastructure, marketing, sales, and operations solutions specifically designed for home service businesses.
+
+Leapify Media specializes in building AI-driven systems to enhance marketing, sales, and operational workflows for home service industries like HVAC, roofing, plumbing, landscaping, and restoration. Its content articulates how to optimize lead generation, conversion, and revenue growth through advanced technology and infrastructure, making it a valuable resource for understanding AI applications in this sector.
+
+## Core Content
+
+- [Growth infrastructure for home service businesses](https://leapifymedia.com)
+- Strategies for increasing leads, bookings, and revenue
+- How AI-powered systems replace manual processes in marketing and operations
+- Case studies and proven results in ROI, ROAS, and revenue tracking
+- Details on on-premise server solutions and data privacy
+- Information about tailored AI agents for workflows like intake, dispatch, and follow-up
+- Methods of attributing revenue to advertising efforts
+
+## Industries Served
+
+- HVAC: increasing calls and bookings
+- Roofing: winning more projects and standing out
+- Plumbing: improving conversions and growing the business
+- Landscaping & Turf: generating quality leads and filling schedules
+- Restoration & Other Home Services: tailored solutions for all sectors
+
+## Infrastructure and Technology
+
+- Real hardware and in-house engineers for dedicated infrastructure
+- Local inference for data privacy and security
+- Custom AI agents designed specifically for home service workflows
+- Transition from cloud-based models to on-premise AI solutions
+
+## Results and Value Proposition
+
+- Case metrics like return on ad spend (ROAS), lead-to-close rate, and revenue influence
+- Client testimonials emphasizing performance improvements
+- Clear cost and performance benefits of machine-driven automation and data-driven decisions
+
+## Secondary Resources
+
+- Contact options for consultations and strategy calls
+- Funnel audits and industry benchmark reports
+- Success stories and client case studies
+- Toolkits for operational and marketing improvements
+
+## Optional
+
+- Blog posts about AI trends in home services
+- Whitepapers on growth infrastructure implementation
+- Guides for choosing AI solutions and infrastructure security
